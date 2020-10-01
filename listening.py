@@ -45,4 +45,8 @@ def checkBg():
         r.adjust_for_ambient_noise(source)
 
 
+checkBg()
 stopListening = r.listen_in_background(m, callback, phrase_time_limit=2)
+
+# stopListening(wait_for_stop=False)
+# Use the above command to stop the program

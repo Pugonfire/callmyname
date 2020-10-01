@@ -78,7 +78,9 @@ def updateDatabase(name, finalList):
     file = open("nameList.txt", "r")
     content = []
     added = False
+    empty = True
     for lines in file:
+        empty = False
         readList = lines.split(",")
         if readList[0] == name:
             updateLine = checkUpdates(
@@ -90,7 +92,10 @@ def updateDatabase(name, finalList):
             content.append(lines)  # continue to append
     file.close()
     if added == False:  # handles if name is not in database
-        finalListStr = "\n" + ",".join(finalList)
+        if empty == True:
+            finalListStr = ",".join(finalList)
+        if empty == False:
+            finalListStr = "\n" + ",".join(finalList)
         content.append(finalListStr)
     print("writing...")
     filewrite = open("nameList.txt", "w+")
