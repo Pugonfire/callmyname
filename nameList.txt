@@ -1,6 +1,1 @@
-JJ,DJ,TJ
-Tze Sheng,position,Asian
-Max,Macs,Nex,Lex,text,mix,NEX
-Gareth,barroth
-Peter,eater
-Stephi,stuffy,sacbee,sticky
+JJ
